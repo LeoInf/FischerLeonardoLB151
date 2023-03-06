@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Glücksrad</title>
+    </h:head>
+    <h:body>
+        <h2>Willkommen beim Glücksrad</h2>
+        
+        <h:form>
+
+            <h:outputLabel  value ="Geben Sie hier einen Konsonanten zum raten ein : "> </h:outputLabel> <h:inputText value="   "  />           <h:commandButton value="Konsonanten bestätigen" action="#{spielController.turn()}" />
+             <br></br>
+           <h:outputLabel value="Am Glücksrad drehen"  /> 
+            <h:commandButton value="drehen" action="#{spielController.turn()}" />
+            <br></br>
+
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h:outputLabel  value ="#{spielController.createhiddenword()}"></h:outputLabel>
+            
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h:outputLabel  value ="Für 1000 Franken können Sie hier jeweils einen Vokal kaufen : "> </h:outputLabel>
+                            <br></br>
+                            <h:commandButton  value="  A  " action="#{spielController.buya()}"   />   
+                            <h:commandButton  value="  E  " action="#{spielController.buye()}"  />   
+                            <h:commandButton  value="  I  " action="#{spielController.buyi()}"   />   
+                            <h:commandButton  value="  O  " action="#{spielController.buyo()}"   />   
+                            <h:commandButton  value="  U  " action="#{spielController.buyu()}"   />   
+
+            <br></br>
+            <br></br>
+            <br></br>
+            
+
+            <h:outputLabel  value ="Kontostand : "> </h:outputLabel> <h:outputLabel id="money" value ="#{spielController.money}"> </h:outputLabel>
+            
+
+            
+                            
+
+
+        </h:form>
+        <br />
+    </h:body>
+
+</html>
+
